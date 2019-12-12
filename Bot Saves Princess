@@ -1,0 +1,37 @@
+#!/usr/bin/python
+
+def displayPathtoPrincess(n,grid):
+    k=int(len(grid)/2)
+    for i in range(len(grid)):
+        for j in range(len(grid)):
+            if grid[i][j]=='p':
+                if i==0 and j==0:
+                    
+                    for l in range(k):
+                        print('UP')
+                    for l in range(k):
+                        print('LEFT')
+                elif i==0 and j==len(grid)-1:
+                    for l in range(k):
+                        print('UP')
+                    for l in range(k):
+                        print('RIGHT')
+                elif i==len(grid)-1 and j==len(grid)-1:
+                    for l in range(k):
+                        print('DOWN')
+                    for l in range(k):
+                        print('RIGHT')
+                elif i==len(grid)-1 and j==0:
+                    for l in range(k):
+                        print('DOWN')
+                    for l in range(k):
+                        print('LEFT')
+                    
+
+
+m = int(input())
+grid = [] 
+for i in range(0, m): 
+    grid.append(input().strip())
+
+displayPathtoPrincess(m,grid)
